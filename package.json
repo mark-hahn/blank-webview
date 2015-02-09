@@ -1,0 +1,16 @@
+{
+  "name": "blank-webview",
+  "main": "./lib/blank-webview",
+  "version": "0.0.0",
+  "description": "demonstration of blank webview problem",
+  "activationCommands": {
+    "atom-workspace": "blank-webview:toggle"
+  },
+  "repository": "https://github.com/atom/blank-webview",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.176.0"
+  },
+  "dependencies": {
+  }
+}
