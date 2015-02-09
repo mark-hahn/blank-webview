@@ -5,21 +5,15 @@ class BlankWebviewView
     @element = document.createElement('div')
     @element.classList.add('blank-webview')
 
-    page1 = document.createElement('webview')
-    page1.setAttribute 'style', 'width: 100%; height: 100%'
-    page1.setAttribute 'src',   
+    webview = document.createElement('webview')
+    webview.setAttribute 'style', 'width: 100%; height: 100%'
+    webview.setAttribute 'src',   
       'file:///c:/Users/Administrator/.atom/packages/web-browser/www/sample.html'
-    @element.appendChild(page1)
+    @element.appendChild(webview)
     
-    # @element.querySelector('.page1').addEventListener 'new-window', (e) ->
-    #   page1.setAttribute 'style', 'display: none'
-    #   page2.setAttribute 'style', 'display: block'
-    #   page2.setAttribute 'src',   'http://google.com'
-    #   
-    #   setTimeout ->
-    #     page2.setAttribute 'style', 'display: none'
-    #     page1.setAttribute 'style', 'display: block'
-    #   , 5000
+    setTimeout ->
+      console.log 'webview.getUrl', webview.getUrl()
+    , 3000
 
   getElement: -> @element
 
